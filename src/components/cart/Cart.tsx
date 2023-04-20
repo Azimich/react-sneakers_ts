@@ -18,11 +18,6 @@ interface ICart {
 const Cart: FC<ICart> = ({ toggleCart, setToggleCart }) => {
   const { cartItems, totalPrice } = useSelector(selectCart)
 
-  const money = totalPrice
-  const tallage = 5
-  const result = (money / 100) * tallage
-  console.log("result", result)
-
   return (
     <div className="overflow-hidden">
       <div
@@ -36,8 +31,8 @@ const Cart: FC<ICart> = ({ toggleCart, setToggleCart }) => {
       <div
         className={
           toggleCart
-            ? "ease absolute bottom-0 right-0 top-0 z-10 flex h-[100%] w-[40%] xl:w-[40%] lg:w-[60%] 2xl:w-[33%] duration-300 md:w-[100%]"
-            : "ease absolute bottom-0 right-[-150%] top-0 z-10 flex h-[100%] lg:w-[60%] 2xl:w-[33%] w-[40%] xl:w-[40%] md:w-[100%] duration-300"
+            ? "ease absolute bottom-0 right-0 top-0 z-10 flex h-[100%] w-[40%] duration-300 2xl:w-[33%] xl:w-[40%] lg:w-[60%] md:w-[100%]"
+            : "ease absolute bottom-0 right-[-150%] top-0 z-10 flex h-[100%] w-[40%] duration-300 2xl:w-[33%] xl:w-[40%] lg:w-[60%] md:w-[100%]"
         }
       >
         <div className="max-md:p-5 flex w-[100%] flex-col bg-white p-8">
@@ -68,7 +63,7 @@ const Cart: FC<ICart> = ({ toggleCart, setToggleCart }) => {
                     <span className="md:border-1 flex items-baseline justify-between gap-2">
                       <p className="font-medium text-black/80">Налог 5%:</p>
                       <p className="md:border-1 flex-1 border-2 border-dashed border-black/10"></p>
-                      <p className="font-bold">{result} руб</p>
+                      <p className="font-bold">{totalPrice / 100 * 5} руб</p>
                     </span>
                   </div>
                 </div>

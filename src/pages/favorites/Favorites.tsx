@@ -23,7 +23,7 @@ const Favorites: FC = () => {
         <h1 className="my-8 text-[32px] font-bold md:text-[28px]">Избранные</h1>
       </div>
       {favoriteItems.length > 0 ? (
-        <ul className="max-sm:flex-wrap max-sm:justify-center max-sm:gap-5 grid grid-cols-4 grid-rows-4 gap-4 rounded-xl pb-40 md:grid-cols-3 sm:grid-cols-2 sm:flex-wrap sm:justify-center sm:gap-4">
+        <ul className="max-sm:flex-wrap max-sm:justify-center max-sm:gap-5 grid grid-cols-4 gap-4 rounded-xl pb-40 md:grid-cols-3 sm:grid-cols-2 sm:flex-wrap sm:justify-center sm:gap-4">
           {favoriteItems.map((items, i) => (
             <ProductFavorite key={i} {...items} />
           ))}

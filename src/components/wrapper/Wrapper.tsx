@@ -8,7 +8,7 @@ interface IWrapper {
 const Wrapper: FC<IWrapper> = ({ children, className }) => {
   return (
     <div
-      className={`mx-auto w-full max-w-[1080px] rounded-[20px] bg-white px-5 md:px-5 ${className || ""}`}
+      className={`mx-auto w-full max-w-[1200px] rounded-[20px] bg-white px-8 md:px-5 ${className || ""}`}
     >
       {children}
     </div>
