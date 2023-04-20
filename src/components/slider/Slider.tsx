@@ -20,6 +20,9 @@ const Slider: FC<ISlider> = () => {
     <div className="relative mx-auto w-full max-w-[1360px] text-[20px] text-white">
       <Swiper loop={true} spaceBetween={20} navigation={true} modules={[Navigation, Autoplay]} className="mySwiper">
         <SwiperSlide>
+          <img src={slide_3} alt={"items.alt"} />
+        </SwiperSlide>
+        <SwiperSlide>
           <img src={Slide_1} alt={"items.alt"} />
         </SwiperSlide>
         <SwiperSlide>
@@ -27,9 +30,6 @@ const Slider: FC<ISlider> = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img src={slide_2} alt={"items.alt"} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_3} alt={"items.alt"} />
         </SwiperSlide>
       </Swiper>
     </div>
