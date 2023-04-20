@@ -10,7 +10,7 @@ const Search: FC = () => {
   }
 
   return (
-    <div className="w-50 relative flex">
+    <div className="w-50 relative flex sm:w-[100%]">
       <img src={SearchIcon} alt="search" className="absolute left-[3%] top-[30%] h-[18px] w-[18px]" />
       <input
         type="text"
